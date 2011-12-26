@@ -9,12 +9,7 @@
 #ifndef Netio_UdpSocket_h
 #define Netio_UdpSocket_h
 
-#include <sys/socket.h>
-#include <sys/select.h>
-#include <netdb.h>
-#include <arpa/inet.h>
-
-#include "IpAddress.h"
+#include "Endpoint.h"
 
 namespace netio
 {
@@ -30,11 +25,11 @@ public:
     };
     
     UdpSocket();
-    UdpSocket(IpAddress address);
+    UdpSocket(const Endpoint & address);
     ~UdpSocket();
     
-    void setAddress(IpAddress address);
-    const IpAddress & getAddress();
+    void setEndpoint(const Endpoint &endpoint);
+    const Endpoint & getEndpoint() { return m_endpoint; }
     
     bool open();
     bool close();
@@ -45,12 +40,13 @@ public:
     bool setBufferSize(Direction bufferDirection, size_t bufferSize);
     size_t getBufferSize(Direction bufferDirection);
     
-    bool send(IpAddress address);
-    bool recv(IpAddress address);
+    bool send();
+    
+	bool recv();
     
 private:    
     int m_socket;
-    IpAddress m_address;
+    Endpoint m_endpoint;
 };
 
 }

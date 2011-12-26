@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		767ADC5114A6B73100F6EBBB /* IpAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 767ADC5014A6B73100F6EBBB /* IpAddress.cpp */; };
 		768AE1871415C6EC00B9469A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 768AE1861415C6EC00B9469A /* main.cpp */; };
 		768AE1891415C6EC00B9469A /* Netio.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 768AE1881415C6EC00B9469A /* Netio.1 */; };
 		76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76EA3FDA1477249A0048E55A /* UdpSocket.cpp */; };
@@ -27,11 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		767ADC5014A6B73100F6EBBB /* IpAddress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IpAddress.cpp; sourceTree = "<group>"; };
 		768AE1821415C6EC00B9469A /* Netio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Netio; sourceTree = BUILT_PRODUCTS_DIR; };
 		768AE1861415C6EC00B9469A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		768AE1881415C6EC00B9469A /* Netio.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Netio.1; sourceTree = "<group>"; };
-		76BD512C147809D100EB93E8 /* IpAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpAddress.h; sourceTree = "<group>"; };
+		76BD512C147809D100EB93E8 /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
 		76EA3FDA1477249A0048E55A /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
 		76EA3FDD147724B00048E55A /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +68,7 @@
 				768AE1881415C6EC00B9469A /* Netio.1 */,
 				76EA3FDA1477249A0048E55A /* UdpSocket.cpp */,
 				76EA3FDD147724B00048E55A /* UdpSocket.h */,
-				76BD512C147809D100EB93E8 /* IpAddress.h */,
-				767ADC5014A6B73100F6EBBB /* IpAddress.cpp */,
+				76BD512C147809D100EB93E8 /* Endpoint.h */,
 			);
 			path = Netio;
 			sourceTree = "<group>";
@@ -129,7 +126,6 @@
 			files = (
 				768AE1871415C6EC00B9469A /* main.cpp in Sources */,
 				76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */,
-				767ADC5114A6B73100F6EBBB /* IpAddress.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +193,7 @@
 		768AE18E1415C6EC00B9469A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
