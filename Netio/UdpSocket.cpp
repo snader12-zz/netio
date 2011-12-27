@@ -51,19 +51,20 @@ namespace netio
 			memset(&sockAddress, 0, sizeof(sockAddress));
 			sockAddress.sin_family = AF_INET;
 			sockAddress.sin_len = sizeof(sockAddress);
-			if (inet_pton(AF_INET, m_endpoint.getAddress().c_str(), &sockAddress.sin_addr) != 1)
+			int result = inet_pton(AF_INET, m_endpoint.getAddress().c_str(), &sockAddress.sin_addr);
+			if (result != SOCKET_ERROR)
 			{
-				// TODO: Add log here for address conversion failure
+				// TODO: Add log here to show error
 				return false;
 			}
 			sockAddress.sin_port = htons(m_endpoint.getPort());
 			
 			// bind the socket to the endpoint...
 			
-			int result = bind(m_socket, (sockaddr *)&sockAddress, sizeof(sockAddress));
+			result = bind(m_socket, (sockaddr *)&sockAddress, sizeof(sockAddress));
 			if (result == SOCKET_ERROR)
 			{
-				// TODO: add log here for bind errors that occured.
+				// TODO: Add log here to show error
 				return false;
 			}
 		}
@@ -76,7 +77,7 @@ namespace netio
 		int result = ::close(m_socket);
 		if (result == SOCKET_ERROR)
 		{
-			// TODO: Add log here for closing socket errors
+			// TODO: Add log here to show error
 			return false;
 		}
 		return true;
@@ -91,11 +92,15 @@ namespace netio
 		}
 		
 		int flags = fcntl(m_socket, F_GETFL);
-		if (flags & O_NONBLOCK)
+
+		if (blocking)
+			flags &= ~O_NONBLOCK;
+		else
+			flags |= O_NONBLOCK;
 		
-		if (fcntl(m_socket, F_SETFL, O_NONBLOCK) == SOCKET_ERROR)
+		if (fcntl(m_socket, F_SETFL, flags) == SOCKET_ERROR)
 		{
-			// TODO: Add log here for failed 
+			// TODO: Add log here to show error
 			return false; 
 		}
 		return true;
@@ -105,13 +110,49 @@ namespace netio
 	{
 		if (m_socket == INVALID_SOCKET)
 		{
-			// TODO: Add log here for bad socket
-			return true;
+			// TODO: Add log here to show a bad socket
+			return false;
 		}
 		
 		int flags = fcntl(m_socket, F_GETFL);
 		if (flags & O_NONBLOCK)
 			return true;
 		return false;
+	}
+	bool UdpSocket::setBufferSize(Direction bufferDirection, size_t bufferSize)
+	{
+		if (m_socket == INVALID_SOCKET)
+		{
+			// TODO: Add log here to show a bad socket
+			return false;
+		}
+		
+		
+		int result = setsockopt(m_socket, SOL_SOCKET, bufferDirection == Incoming ? SO_RCVBUF : SO_SNDBUF, &bufferSize, sizeof(bufferSize));
+		if (result == SOCKET_ERROR)
+		{
+			// TODO: Add log here to show error
+			return false;
+		}
+	
+		return true;
+	}
+	
+	size_t UdpSocket::getBufferSize(Direction bufferDirection)
+	{
+		if (m_socket == INVALID_SOCKET)
+		{
+			// TODO: Add log here to show a bad socket
+			return 0;
+		}
+		size_t bufferSize;
+		socklen_t lengthHolder;
+		int result = getsockopt(m_socket, SOL_SOCKET, bufferDirection == Incoming ? SO_RCVBUF : SO_SNDBUF, &bufferSize, &lengthHolder);
+		if (result == SOCKET_ERROR)
+		{
+			// TODO: Add log here to show error
+			
+		}
+		return bufferSize;
 	}
 }
