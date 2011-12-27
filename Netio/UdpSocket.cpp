@@ -90,11 +90,28 @@ namespace netio
 			return false;
 		}
 		
+		int flags = fcntl(m_socket, F_GETFL);
+		if (flags & O_NONBLOCK)
+		
 		if (fcntl(m_socket, F_SETFL, O_NONBLOCK) == SOCKET_ERROR)
 		{
 			// TODO: Add log here for failed 
 			return false; 
 		}
 		return true;
+	}
+	
+	bool UdpSocket::isBlocking()
+	{
+		if (m_socket == INVALID_SOCKET)
+		{
+			// TODO: Add log here for bad socket
+			return true;
+		}
+		
+		int flags = fcntl(m_socket, F_GETFL);
+		if (flags & O_NONBLOCK)
+			return true;
+		return false;
 	}
 }
