@@ -40,7 +40,7 @@ public:
     bool setBufferSize(Direction bufferDirection, size_t bufferSize);
     size_t getBufferSize(Direction bufferDirection);
     
-    bool send(const Endpoint &remoteEndpoint, );
+    bool send(const Endpoint &remoteEndpoint);
     
 	bool recv();
     
