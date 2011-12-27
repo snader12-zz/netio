@@ -3,7 +3,7 @@
 //  Netio
 //
 //  Created by Sadullah Nader on 9/5/11.
-//  Copyright 2011 F9E. All rights reserved.
+//  Copyright 2011. All rights reserved.
 //
 
 #include <iostream>

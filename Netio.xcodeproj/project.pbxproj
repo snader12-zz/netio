@@ -32,6 +32,7 @@
 		76BD512C147809D100EB93E8 /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
 		76EA3FDA1477249A0048E55A /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
 		76EA3FDD147724B00048E55A /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
+		76ED329014A9A1A60039E3AB /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 				76EA3FDA1477249A0048E55A /* UdpSocket.cpp */,
 				76EA3FDD147724B00048E55A /* UdpSocket.h */,
 				76BD512C147809D100EB93E8 /* Endpoint.h */,
+				76ED329014A9A1A60039E3AB /* Buffer.h */,
 			);
 			path = Netio;
 			sourceTree = "<group>";

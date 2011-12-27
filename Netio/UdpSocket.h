@@ -3,7 +3,7 @@
 //  Netio
 //
 //  Created by Sadullah Nader on 11/18/11.
-//  Copyright 2011 F9E. All rights reserved.
+//  Copyright 2011. All rights reserved.
 //
 
 #ifndef Netio_UdpSocket_h
@@ -40,7 +40,7 @@ public:
     bool setBufferSize(Direction bufferDirection, size_t bufferSize);
     size_t getBufferSize(Direction bufferDirection);
     
-    bool send();
+    bool send(const Endpoint &remoteEndpoint, );
     
 	bool recv();
     

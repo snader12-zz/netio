@@ -3,7 +3,7 @@
 //  Netio
 //
 //  Created by Sadullah Nader on 11/18/11.
-//  Copyright 2011 F9E. All rights reserved.
+//  Copyright 2011. All rights reserved.
 //
 
 #include "UdpSocket.h"
