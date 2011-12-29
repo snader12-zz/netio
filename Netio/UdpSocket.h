@@ -10,6 +10,7 @@
 #define Netio_UdpSocket_h
 
 #include "Endpoint.h"
+#include "PacketBuffer.h"
 
 namespace netio
 {
@@ -40,9 +41,9 @@ public:
     bool setBufferSize(Direction bufferDirection, size_t bufferSize);
     size_t getBufferSize(Direction bufferDirection);
     
-    bool send(const Endpoint &remoteEndpoint);
+    bool send(const Endpoint &remoteEndpoint, const PacketBuffer & sendBuffer);
     
-	bool recv();
+	bool recv(Endpoint &remoteEndpoint, PacketBuffer & sendBuffer);
     
 private:    
     int m_socket;
