@@ -12,16 +12,16 @@ CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
 CND_ARTIFACT_NAME_Debug=libnetio.a
 CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/libnetio.a
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=Netio.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/Netio.tar
+CND_PACKAGE_NAME_Debug=netio.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/netio.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
 CND_ARTIFACT_NAME_Release=libnetio.a
 CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/libnetio.a
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=Netio.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/Netio.tar
+CND_PACKAGE_NAME_Release=netio.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/netio.tar
 #
 # include compiler specific variables
 #

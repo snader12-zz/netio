@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		768AE1871415C6EC00B9469A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 768AE1861415C6EC00B9469A /* main.cpp */; };
 		768AE1891415C6EC00B9469A /* Netio.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 768AE1881415C6EC00B9469A /* Netio.1 */; };
+		76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76B68C0A14B1802600337D84 /* PacketBuffer.cpp */; };
 		76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76EA3FDA1477249A0048E55A /* UdpSocket.cpp */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +30,8 @@
 		768AE1821415C6EC00B9469A /* Netio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Netio; sourceTree = BUILT_PRODUCTS_DIR; };
 		768AE1861415C6EC00B9469A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		768AE1881415C6EC00B9469A /* Netio.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Netio.1; sourceTree = "<group>"; };
-		769887D814A9AAC800E3A343 /* PacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PacketBuffer.h; sourceTree = "<group>"; };
+		769887D814A9AAC800E3A343 /* PacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketBuffer.h; sourceTree = "<group>"; };
+		76B68C0A14B1802600337D84 /* PacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketBuffer.cpp; sourceTree = "<group>"; };
 		76BD512C147809D100EB93E8 /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
 		76EA3FDA1477249A0048E55A /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
 		76EA3FDD147724B00048E55A /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		768AE1851415C6EC00B9469A /* Netio */ = {
 			isa = PBXGroup;
 			children = (
+				76B68C0A14B1802600337D84 /* PacketBuffer.cpp */,
 				768AE1861415C6EC00B9469A /* main.cpp */,
 				768AE1881415C6EC00B9469A /* Netio.1 */,
 				76EA3FDA1477249A0048E55A /* UdpSocket.cpp */,
@@ -128,6 +131,7 @@
 			files = (
 				768AE1871415C6EC00B9469A /* main.cpp in Sources */,
 				76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */,
+				76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

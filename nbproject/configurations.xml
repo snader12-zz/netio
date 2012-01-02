@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>Netio/Endpoint.h</itemPath>
       <itemPath>Netio/PacketBuffer.h</itemPath>
+      <itemPath>Netio/Transport.h</itemPath>
       <itemPath>Netio/UdpSocket.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -15,6 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Netio/PacketBuffer.cpp</itemPath>
       <itemPath>Netio/UdpSocket.cpp</itemPath>
       <itemPath>Netio/main.cpp</itemPath>
     </logicalFolder>
@@ -53,6 +55,7 @@
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <commandLine>-std=c++0x</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>

@@ -34,6 +34,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Netio/PacketBuffer.o \
 	${OBJECTDIR}/Netio/main.o \
 	${OBJECTDIR}/Netio/UdpSocket.o
 
@@ -42,8 +43,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-std=c++0x
+CXXFLAGS=-std=c++0x
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -63,6 +64,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnetio.a: ${OBJECTFILES}
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnetio.a
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnetio.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libnetio.a
+
+${OBJECTDIR}/Netio/PacketBuffer.o: Netio/PacketBuffer.cpp 
+	${MKDIR} -p ${OBJECTDIR}/Netio
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Netio/PacketBuffer.o Netio/PacketBuffer.cpp
 
 ${OBJECTDIR}/Netio/main.o: Netio/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/Netio

@@ -9,8 +9,7 @@
 #ifndef Netio_UdpSocket_h
 #define Netio_UdpSocket_h
 
-#include "Endpoint.h"
-#include "PacketBuffer.h"
+#include "Transport.h"
 
 namespace netio
 {
