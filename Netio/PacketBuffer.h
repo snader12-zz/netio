@@ -9,6 +9,7 @@
 #ifndef Netio_PacketBuffer_h
 #define Netio_PacketBuffer_h
 
+#include "Transport.h"
 #include <cstddef>
 
 namespace netio 
