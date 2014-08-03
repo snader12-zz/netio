@@ -1,3 +1,5 @@
+#pragma once
+
 //
 //  Buffer.h
 //  Netio
@@ -5,9 +7,6 @@
 //  Created by Sadullah Nader on 12/26/11.
 //  Copyright (c) 2011. All rights reserved.
 //
-
-#ifndef Netio_PacketBuffer_h
-#define Netio_PacketBuffer_h
 
 #include "Transport.h"
 #include <cstddef>
@@ -20,6 +19,7 @@ class PacketBuffer
 public:
 	enum ReadResult
 	{
+		ReadResult_Success,
 		ReadResult_Empty,
 		ReadResult_Partial,
 		ReadResult_Full
@@ -27,6 +27,7 @@ public:
 	
 	enum WriteResult
 	{
+		WriteResult_Success,
 		WriteResult_Empty,
 		WriteResult_Partial,
 		WriteResult_Full
@@ -40,7 +41,7 @@ public:
 	const void * getRawBuffer() { return m_buffer; }
 	
 	ReadResult readBits(char *byteArray, size_t bitsToRead);
-	float readFloat(size_t bitsToRead);
+	ReadResult readFloat(float &number, size_t bitsToRead);
 	int readInt(size_t bitsToRead);
 	double readDouble(size_t bitsToRead);
 	
@@ -55,5 +56,3 @@ private:
 };
 
 }
-
-#endif

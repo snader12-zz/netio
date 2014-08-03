@@ -32,6 +32,13 @@ PacketBuffer::ReadResult PacketBuffer::readBits(char *byteArray, size_t bitsToRe
 		memcpy(byteArray, m_buffer, m_size);
 	else
 		memcpy(byteArray, m_buffer, bitsToRead);
+	
+	return ReadResult_Empty;
+}
+	
+PacketBuffer::ReadResult PacketBuffer::readFloat(float &number, size_t bitsToRead)
+{
+	
 }
 	
 PacketBuffer::WriteResult PacketBuffer::writeBits(char *byteArray, size_t bitsToWrite)

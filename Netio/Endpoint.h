@@ -1,3 +1,5 @@
+#pragma once
+
 //
 //  IpAddress.h
 //  Netio
@@ -5,9 +7,6 @@
 //  Created by Sadullah Nader on 11/19/11.
 //  Copyright 2011. All rights reserved.
 //
-
-#ifndef Netio_Endpoint_h
-#define Netio_Endpoint_h
 
 #include <string>
 
@@ -37,4 +36,3 @@ private:
 
 }
 
-#endif

@@ -1,3 +1,5 @@
+#pragma once
+
 //
 //  UdpSocket.h
 //  Netio
@@ -5,9 +7,6 @@
 //  Created by Sadullah Nader on 11/18/11.
 //  Copyright 2011. All rights reserved.
 //
-
-#ifndef Netio_UdpSocket_h
-#define Netio_UdpSocket_h
 
 #include "Transport.h"
 
@@ -50,5 +49,3 @@ private:
 };
 
 }
-    
-#endif
