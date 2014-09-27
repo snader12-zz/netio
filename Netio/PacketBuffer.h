@@ -9,7 +9,6 @@
 //
 
 #include "Transport.h"
-#include <cstddef>
 
 namespace netio 
 {
@@ -17,13 +16,6 @@ namespace netio
 class PacketBuffer
 {
 public:
-	enum ReadResult
-	{
-		ReadResult_Success,
-		ReadResult_Empty,
-		ReadResult_Partial,
-		ReadResult_Full
-	};
 	
 	enum WriteResult
 	{
@@ -42,7 +34,7 @@ public:
 	
 	ReadResult readBits(char *byteArray, size_t bitsToRead);
 	ReadResult readFloat(float &number, size_t bitsToRead);
-	int readInt(size_t bitsToRead);
+	ReadResult readInt(int32_t &number, size_t bitsToRead);
 	double readDouble(size_t bitsToRead);
 	
 	WriteResult writeBits(char *byteArray, size_t bitsToWrite);
@@ -51,7 +43,8 @@ public:
 	WriteResult writeDouble(double number, size_t bitsToWrite);
 private:
 	size_t m_capacity;
-	size_t m_size;
+	size_t m_position;
+	int32_t m_bitOffset;
 	char *m_buffer;
 };
 

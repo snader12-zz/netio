@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76080F6C199D6EED00D1CC6B /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76080F6A199D6EED00D1CC6B /* UdpSocket.cpp */; };
+		76080F70199D70AC00D1CC6B /* Endpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76080F6E199D70AC00D1CC6B /* Endpoint.cpp */; };
+		766491FD199EE3A50050AE12 /* ReadPacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 766491FB199EE3A50050AE12 /* ReadPacketBuffer.cpp */; };
 		768AE1871415C6EC00B9469A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 768AE1861415C6EC00B9469A /* main.cpp */; };
 		768AE1891415C6EC00B9469A /* Netio.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 768AE1881415C6EC00B9469A /* Netio.1 */; };
 		76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76B68C0A14B1802600337D84 /* PacketBuffer.cpp */; };
-		76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76EA3FDA1477249A0048E55A /* UdpSocket.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,14 +29,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76080F6A199D6EED00D1CC6B /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UdpSocket.cpp; path = unix/UdpSocket.cpp; sourceTree = "<group>"; };
+		76080F6B199D6EED00D1CC6B /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UdpSocket.h; path = unix/UdpSocket.h; sourceTree = "<group>"; };
+		76080F6D199D6F7B00D1CC6B /* Transport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transport.h; path = unix/Transport.h; sourceTree = "<group>"; };
+		76080F6E199D70AC00D1CC6B /* Endpoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Endpoint.cpp; path = unix/Endpoint.cpp; sourceTree = "<group>"; };
+		76080F6F199D70AC00D1CC6B /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Endpoint.h; path = unix/Endpoint.h; sourceTree = "<group>"; };
+		766491FB199EE3A50050AE12 /* ReadPacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReadPacketBuffer.cpp; sourceTree = "<group>"; };
+		766491FC199EE3A50050AE12 /* ReadPacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadPacketBuffer.h; sourceTree = "<group>"; };
 		768AE1821415C6EC00B9469A /* Netio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Netio; sourceTree = BUILT_PRODUCTS_DIR; };
 		768AE1861415C6EC00B9469A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		768AE1881415C6EC00B9469A /* Netio.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Netio.1; sourceTree = "<group>"; };
 		769887D814A9AAC800E3A343 /* PacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketBuffer.h; sourceTree = "<group>"; };
 		76B68C0A14B1802600337D84 /* PacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketBuffer.cpp; sourceTree = "<group>"; };
-		76BD512C147809D100EB93E8 /* Endpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
-		76EA3FDA1477249A0048E55A /* UdpSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UdpSocket.cpp; sourceTree = "<group>"; };
-		76EA3FDD147724B00048E55A /* UdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpSocket.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +73,17 @@
 		768AE1851415C6EC00B9469A /* Netio */ = {
 			isa = PBXGroup;
 			children = (
-				76B68C0A14B1802600337D84 /* PacketBuffer.cpp */,
+				76080F6E199D70AC00D1CC6B /* Endpoint.cpp */,
+				76080F6F199D70AC00D1CC6B /* Endpoint.h */,
 				768AE1861415C6EC00B9469A /* main.cpp */,
-				768AE1881415C6EC00B9469A /* Netio.1 */,
-				76EA3FDA1477249A0048E55A /* UdpSocket.cpp */,
-				76EA3FDD147724B00048E55A /* UdpSocket.h */,
-				76BD512C147809D100EB93E8 /* Endpoint.h */,
+				76B68C0A14B1802600337D84 /* PacketBuffer.cpp */,
 				769887D814A9AAC800E3A343 /* PacketBuffer.h */,
+				766491FB199EE3A50050AE12 /* ReadPacketBuffer.cpp */,
+				766491FC199EE3A50050AE12 /* ReadPacketBuffer.h */,
+				76080F6D199D6F7B00D1CC6B /* Transport.h */,
+				76080F6B199D6EED00D1CC6B /* UdpSocket.h */,
+				76080F6A199D6EED00D1CC6B /* UdpSocket.cpp */,
+				768AE1881415C6EC00B9469A /* Netio.1 */,
 			);
 			path = Netio;
 			sourceTree = "<group>";
@@ -104,7 +114,7 @@
 		768AE1791415C6EC00B9469A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = F9E;
 			};
 			buildConfigurationList = 768AE17C1415C6EC00B9469A /* Build configuration list for PBXProject "Netio" */;
@@ -129,8 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76080F6C199D6EED00D1CC6B /* UdpSocket.cpp in Sources */,
 				768AE1871415C6EC00B9469A /* main.cpp in Sources */,
-				76EA3FDB1477249A0048E55A /* UdpSocket.cpp in Sources */,
+				766491FD199EE3A50050AE12 /* ReadPacketBuffer.cpp in Sources */,
+				76080F70199D70AC00D1CC6B /* Endpoint.cpp in Sources */,
 				76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,9 +154,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -160,10 +177,14 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "./unix/**";
 			};
 			name = Debug;
 		};
@@ -171,9 +192,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -182,10 +208,14 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "./unix/**";
 			};
 			name = Release;
 		};

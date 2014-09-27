@@ -8,10 +8,12 @@
 //  Copyright 2011. All rights reserved.
 //
 
-#include "Transport.h"
+#include "Endpoint.h"
 
 namespace netio
 {
+class Endpoint;
+class PacketBuffer;
 
 class UdpSocket
 {
@@ -28,7 +30,7 @@ public:
     ~UdpSocket();
     
     void setEndpoint(const Endpoint &endpoint);
-    const Endpoint & getEndpoint() { return m_endpoint; }
+    const Endpoint & getEndpoint() const { return m_endpoint; }
     
     bool open();
     bool close();
