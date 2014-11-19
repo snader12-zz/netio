@@ -3,7 +3,35 @@
 //  Netio
 //
 //  Created by Sadullah Nader on 8/15/14.
-//  Copyright (c) 2014 F9E. All rights reserved.
+//  Copyright (c) 2014. All rights reserved.
 //
 
 #include "ReadPacketBuffer.h"
+
+namespace netio
+{
+
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readBits(char *byteArray, size_t bytesToRead)
+{
+	if (getPosition() == 0)
+		return ReadResult_Empty;
+	if (getSize() < bytesToRead)
+		memcpy(byteArray, m_buffer, getSize());
+	else
+		memcpy(byteArray, m_buffer, bitsToRead);
+	
+	return ReadResult_Empty;
+}
+
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readInt(int32_t &number, size_t bitsToRead)
+{
+	return ReadResult_Success;
+}
+		
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readFloat(float &number, size_t bitsToRead)
+{
+	return  ReadResult_Success;
+}
+
+
+}

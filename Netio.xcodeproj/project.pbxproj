@@ -13,6 +13,7 @@
 		768AE1871415C6EC00B9469A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 768AE1861415C6EC00B9469A /* main.cpp */; };
 		768AE1891415C6EC00B9469A /* Netio.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 768AE1881415C6EC00B9469A /* Netio.1 */; };
 		76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76B68C0A14B1802600337D84 /* PacketBuffer.cpp */; };
+		76BC766519E9A969000029AF /* WritePacketBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76BC766319E9A969000029AF /* WritePacketBuffer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		768AE1881415C6EC00B9469A /* Netio.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Netio.1; sourceTree = "<group>"; };
 		769887D814A9AAC800E3A343 /* PacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketBuffer.h; sourceTree = "<group>"; };
 		76B68C0A14B1802600337D84 /* PacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PacketBuffer.cpp; sourceTree = "<group>"; };
+		76BC766319E9A969000029AF /* WritePacketBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WritePacketBuffer.cpp; sourceTree = "<group>"; };
+		76BC766419E9A969000029AF /* WritePacketBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WritePacketBuffer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				76080F6B199D6EED00D1CC6B /* UdpSocket.h */,
 				76080F6A199D6EED00D1CC6B /* UdpSocket.cpp */,
 				768AE1881415C6EC00B9469A /* Netio.1 */,
+				76BC766319E9A969000029AF /* WritePacketBuffer.cpp */,
+				76BC766419E9A969000029AF /* WritePacketBuffer.h */,
 			);
 			path = Netio;
 			sourceTree = "<group>";
@@ -114,7 +119,7 @@
 		768AE1791415C6EC00B9469A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = F9E;
 			};
 			buildConfigurationList = 768AE17C1415C6EC00B9469A /* Build configuration list for PBXProject "Netio" */;
@@ -144,6 +149,7 @@
 				766491FD199EE3A50050AE12 /* ReadPacketBuffer.cpp in Sources */,
 				76080F70199D70AC00D1CC6B /* Endpoint.cpp in Sources */,
 				76B68C0B14B1802600337D84 /* PacketBuffer.cpp in Sources */,
+				76BC766519E9A969000029AF /* WritePacketBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +167,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
@@ -199,9 +207,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

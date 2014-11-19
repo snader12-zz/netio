@@ -10,29 +10,29 @@
 	<string>Netio</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5309C243-22FB-4CC4-AF11-C40F75986DBD</key>
+		<key>E00D2826A2B10EDD70325385FDA5546A7985EADC</key>
 		<string>https://github.com/snader12/netio.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Netio.xcodeproj/project.xcworkspace</string>
+	<string>Netio.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5309C243-22FB-4CC4-AF11-C40F75986DBD</key>
+		<key>E00D2826A2B10EDD70325385FDA5546A7985EADC</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/snader12/netio.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5309C243-22FB-4CC4-AF11-C40F75986DBD</string>
+	<string>E00D2826A2B10EDD70325385FDA5546A7985EADC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5309C243-22FB-4CC4-AF11-C40F75986DBD</string>
+			<string>E00D2826A2B10EDD70325385FDA5546A7985EADC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>netio</string>
 		</dict>

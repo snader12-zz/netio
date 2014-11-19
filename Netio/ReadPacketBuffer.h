@@ -5,11 +5,14 @@
 //  Netio
 //
 //  Created by Sadullah Nader on 8/15/14.
-//  Copyright (c) 2014 F9E. All rights reserved.
+//  Copyright (c) 2014. All rights reserved.
 //
 
 #include <iostream>
 #include "PacketBuffer.h"
+
+namespace netio
+{
 
 class ReadPacketBuffer: public PacketBuffer
 {
@@ -22,6 +25,16 @@ public:
 		ReadResult_Full
 	};
 	
+	ReadPacketBuffer(char* data, size_t dataLength);
+	
+	ReadResult readBits(char *byteArray, size_t bytesToRead);
+	ReadResult readFloat(float &number);
+	ReadResult readCompressedFloat(float &number);
+	ReadResult readInt(int32_t &number, size_t bitsToRead);
+	double readDouble(size_t bitsToRead);
+	
 private:
 	
 };
+
+}
