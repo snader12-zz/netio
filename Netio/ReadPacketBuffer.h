@@ -27,11 +27,11 @@ public:
 	
 	ReadPacketBuffer(char* data, size_t dataLength);
 	
-	ReadResult readBits(char *byteArray, size_t bytesToRead);
-	ReadResult readFloat(float &number);
-	ReadResult readCompressedFloat(float &number);
-	ReadResult readInt(int32_t &number, size_t bitsToRead);
-	double readDouble(size_t bitsToRead);
+	ReadResult readBits(char* byteArray, size_t bytesToRead);
+	ReadResult readFloat(float& number);
+	ReadResult readCompressedFloat(float& number);
+	ReadResult readInt(int32_t& number, size_t bitsToRead);
+	ReadResult readDouble(double& bitsToRead);
 	
 private:
 	

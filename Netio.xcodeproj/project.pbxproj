@@ -120,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = F9E;
+				ORGANIZATIONNAME = "Sadullah Nader";
 			};
 			buildConfigurationList = 768AE17C1415C6EC00B9469A /* Build configuration list for PBXProject "Netio" */;
 			compatibilityVersion = "Xcode 3.2";

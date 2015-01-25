@@ -18,20 +18,30 @@ ReadPacketBuffer::ReadResult ReadPacketBuffer::readBits(char *byteArray, size_t 
 	if (getSize() < bytesToRead)
 		memcpy(byteArray, m_buffer, getSize());
 	else
-		memcpy(byteArray, m_buffer, bitsToRead);
+		memcpy(byteArray, m_buffer, bytesToRead);
 	
 	return ReadResult_Empty;
 }
-
-ReadPacketBuffer::ReadResult ReadPacketBuffer::readInt(int32_t &number, size_t bitsToRead)
-{
-	return ReadResult_Success;
-}
-		
-ReadPacketBuffer::ReadResult ReadPacketBuffer::readFloat(float &number, size_t bitsToRead)
+	
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readFloat(float &number)
 {
 	return  ReadResult_Success;
 }
 
+	ReadPacketBuffer::ReadResult ReadPacketBuffer::readCompressedFloat(float &number)
+	{
+		return ReadResult_Success;
+	}
 
+	ReadPacketBuffer::ReadResult ReadPacketBuffer::readInt(int32_t &number, size_t bitsToRead)
+	{
+		return ReadResult_Success;
+	}
+	
+	ReadPacketBuffer::ReadResult ReadPacketBuffer::readDouble(double &number)
+	{
+		return ReadResult_Success;
+	}
+
+	
 }

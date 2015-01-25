@@ -16,6 +16,14 @@ namespace netio
 class WritePacketBuffer: public PacketBuffer
 {
 public:
+	enum WriteResult
+	{
+		WriteResult_Success,
+		WriteResult_Empty,
+		WriteResult_Partial,
+		WriteResult_Full
+	};
+	
 	WritePacketBuffer();
 	~WritePacketBuffer();
 	
