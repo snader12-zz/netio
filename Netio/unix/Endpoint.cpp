@@ -74,6 +74,15 @@ Endpoint::Endpoint(in_addr ipAddress, uint16_t port)
 	m_address.ipv4.sin_port = htons(port);
 	m_address.ipv4.sin_addr = ipAddress;
 }
+    
+Endpoint::Endpoint(in6_addr ip6Address, uint16_t port)
+    : m_type(EndpointType_Ipv6)
+{
+    memset(&m_address, 0, sizeof(m_address));
+    m_address.ipv6.sin6_family = AF_INET6;
+    m_address.ipv6.sin6_port = htons(port);
+    m_address.ipv6.sin6_addr = ip6Address;
+}
 
 Endpoint::Endpoint(const Endpoint &rhs)
 	: m_type(rhs.m_type)
@@ -95,6 +104,21 @@ Endpoint::Endpoint(const Endpoint &rhs)
 	}
 }
 
+const sockaddr* Endpoint::getSockAddr() const
+{
+    switch(m_type)
+    {
+        case EndpointType_Ipv4:
+            return (sockaddr*)(&m_address.ipv4);
+        case EndpointType_Ipv6:
+            return (sockaddr*)(&m_address.ipv6);
+        default:
+            cerr << "No compatible endpoint type set";
+    }
+    return nullptr;
+}
+
+    
 std::string Endpoint::getAddress()
 {
 	const void* address = nullptr;

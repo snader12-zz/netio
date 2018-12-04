@@ -28,20 +28,20 @@ ReadPacketBuffer::ReadResult ReadPacketBuffer::readFloat(float &number)
 	return  ReadResult_Success;
 }
 
-	ReadPacketBuffer::ReadResult ReadPacketBuffer::readCompressedFloat(float &number)
-	{
-		return ReadResult_Success;
-	}
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readCompressedFloat(float &number)
+{
+    return ReadResult_Success;
+}
 
-	ReadPacketBuffer::ReadResult ReadPacketBuffer::readInt(int32_t &number, size_t bitsToRead)
-	{
-		return ReadResult_Success;
-	}
-	
-	ReadPacketBuffer::ReadResult ReadPacketBuffer::readDouble(double &number)
-	{
-		return ReadResult_Success;
-	}
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readInt(int32_t &number, size_t bitsToRead)
+{
+    return ReadResult_Success;
+}
+
+ReadPacketBuffer::ReadResult ReadPacketBuffer::readDouble(double &number)
+{
+    return ReadResult_Success;
+}
 
 	
 }

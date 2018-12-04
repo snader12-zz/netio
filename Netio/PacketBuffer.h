@@ -21,7 +21,9 @@ public:
 	PacketBuffer(size_t bufferCapacity);
 	~PacketBuffer();
 	size_t getCapacity() { return m_capacity; }
-	size_t getSize() { return m_position; }
+	size_t getSize() const { return m_position; }
+    
+    const void* getDataBuffer() const { return m_buffer; }
 
 protected:
 	size_t getPosition() { return m_position; }

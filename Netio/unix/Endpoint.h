@@ -30,7 +30,9 @@ public:
 	Endpoint();
 	explicit Endpoint(std::string& addressString, uint16_t port, EndpointType addressType);
 	explicit Endpoint(in_addr ipAddress, uint16_t port);
-	Endpoint(const Endpoint &rhs);
+    explicit Endpoint(in6_addr ip6Address, uint16_t port);
+    
+    Endpoint(const Endpoint &rhs);
 	
 	std::string getAddress();
     uint16_t getPort();
@@ -38,6 +40,7 @@ public:
 	EndpointType getEndpointType() { return m_type; }
 	const sockaddr_in6& getAsIpv6Addr() { return m_address.ipv6; }
 	const sockaddr_in& getAsIpv4Addr()  { return m_address.ipv4; }
+    const sockaddr* getSockAddr() const;
 	bool isValid() { return m_type != EndpointType_None; }
 	
 private:
