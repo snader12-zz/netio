@@ -158,8 +158,11 @@ bool UdpSocket::send(const netio::Endpoint &remoteEndpoint, const netio::PacketB
     
     if (socketBufferSize > sendBuffer.getSize())
     {
-        int result = ::send(m_socket, sendBuffer.getDataBuffer(), sendBuffer.getSize(), 0);
+        ssize_t result = ::send(m_socket, sendBuffer.getDataBuffer(), sendBuffer.getSize(), 0);
         if (result == SOCKET_ERROR)
+        {
+            return false;
+        }
     }
     
     
